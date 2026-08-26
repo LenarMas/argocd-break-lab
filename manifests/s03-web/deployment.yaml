@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s03-web
+  labels:
+    app: s03-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: s03-web
+  template:
+    metadata:
+      labels:
+        app: s03-web
+    spec:
+      containers:
+        - name: web
+          image: nginx:1.29-alpin
+          ports:
+            - containerPort: 80

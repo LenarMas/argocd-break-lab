@@ -1,0 +1,10 @@
+{
+  "name": "argocd-break-lab",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": { "minikube": "none" }
+  },
+  "hostRequirements": { "cpus": 4, "memory": "8gb" },
+  "postCreateCommand": "echo 'run ./setup.sh to build the cluster'"
+}

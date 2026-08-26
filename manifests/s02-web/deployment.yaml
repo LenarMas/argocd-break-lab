@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s02-web
+  labels:
+    app: s02-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: s02-web
+  template:
+    metadata:
+      labels:
+        app: s02-web
+    spec:
+      containers:
+        - name: web
+          image: nginx:1.27-alpine

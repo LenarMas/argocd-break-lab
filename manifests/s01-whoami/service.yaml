@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: s01-whoami
+spec:
+  selector:
+    app: s01-whoami
+  ports:
+    - port: 80
+      targetPort: 80
