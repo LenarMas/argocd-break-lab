@@ -26,7 +26,7 @@ kubectl cluster-info --context "kind-$CLUSTER" >/dev/null
 
 kubectl create namespace argocd --dry-run=client -o yaml | kubectl apply -f -
 echo ">> installing Argo CD"
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml >/dev/null
+kubectl apply -n argocd --server-side=true --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml >/dev/null
 
 # serve the UI over plain HTTP so Codespaces port forwarding works without cert warnings
 kubectl -n argocd patch configmap argocd-cmd-params-cm --type merge -p '{"data":{"server.insecure":"true"}}'
