@@ -11,7 +11,9 @@ spec:
     path: manifests/s02-web
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: demo-02
   syncPolicy:
     automated:
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
