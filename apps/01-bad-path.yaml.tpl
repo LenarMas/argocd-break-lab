@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: ${REPO_URL}
     targetRevision: ${REV}
-    path: manifests/s01-whoami-app
+    path: manifests/s01-whoami
   destination:
     server: https://kubernetes.default.svc
     namespace: demo-01
