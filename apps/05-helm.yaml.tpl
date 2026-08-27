@@ -11,7 +11,7 @@ spec:
     path: charts/s05-web
     helm:
       valueFiles:
-        - values-prod.yaml
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: demo-05
