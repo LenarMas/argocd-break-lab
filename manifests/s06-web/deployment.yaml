@@ -9,6 +9,7 @@ spec:
   selector:
     matchLabels:
       app: s06-web
+      tier: frontend
   template:
     metadata:
       labels:
