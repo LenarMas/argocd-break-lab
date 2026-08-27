@@ -6,7 +6,7 @@ metadata:
 spec:
   description: Locked down project
   sourceRepos:
-    - https://github.com/argoproj/*
+    - https://github.com/LenarMas/argocd-break-lab
   destinations:
     - server: https://kubernetes.default.svc
       namespace: default
